@@ -41,6 +41,16 @@ if(isset($_POST['update'])) {
     $conn->close();
     header('location: index.php');
 }
+// delete one of data
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+
+    $delete_query = "DELETE FROM demo_table WHERE id=$id";
+    $conn->query($delete_query) or die($conn->error);
+
+    $conn->close();
+    header("location: index.php");
+}
 
 
 

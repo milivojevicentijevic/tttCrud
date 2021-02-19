@@ -12,14 +12,21 @@
         <h1>PHP + MySQL CRUD Demo</h1>
         <p>Create, read, update and delete records below</p>
         <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
             <tbody>
                 <?php include 'read.php'; ?>
             </tbody>
         </table>
         <form action="create.php" method="POST" class="form-inline m-2 d-flex justify-content-center">
-            <label for="name">Name</label>
+            <label for="name" class="form-label">Name</label>
             <input type="text" id="name" name="name" class="form-control m-2">
-            <label for="score">Score</label>
+            <label for="score" class="form-label">Score</label>
             <input type="number" id="score" name="score" class="form-control m-2">
             <button name="submit" type="submit" class="btn btn-primary">Add</button>
         </form>
